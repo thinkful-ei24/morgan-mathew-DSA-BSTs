@@ -113,6 +113,7 @@ function main() {
 
   tree.print();
 }
-main();
+// main();
 
 module.exports = BinarySearchTree;
+
