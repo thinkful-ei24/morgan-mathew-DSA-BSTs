@@ -54,10 +54,26 @@ class BinarySearchTree {
     //    go left until this.left === null
     //  currentNode.value,.key = successor.value,.key
     //  return successor.remove(successor.key)
+    //
+    // Removing Case: One child
     // else if this.left || this.right
+    //    if (this.left) 
+    //       set successorNode = this.left
+    //    parent = this.parent
+    //    if(parent.left === this)
+    //        parent.left = successorNode
+    //        successorNode.parent = parent
+    //    if(parent.right === this)
+    //        parent.right = successorNode
+    //        successorNode.parent = parent
     //    set removalNode = this.left || this.right
-    //    this.left.parent (this) = 
-    // else...
+    // 
+    // Removal Case: Leaf
+    //    if(this.parent.left === this)
+    //        this.parent.left = null
+    //    if(this.parent.right === this)
+    //        this.parent.right = null
+    // 
   }
 
 }
