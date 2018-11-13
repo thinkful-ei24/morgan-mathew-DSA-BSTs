@@ -1,3 +1,4 @@
+'use strict';
 
 class BinarySearchTree {
   constructor(key=null, value=null, parent=null) {
@@ -25,9 +26,39 @@ class BinarySearchTree {
     }
   }
 
-  find(key) {}
+  find(key) {
+    //Walk throgh nodes, compare left vs right
+    //if key is null, return null
+    //if key is found, return value || key if value is null
+    if (this.key === key) {
+      return this.value || this.key;
+    }
 
-  remove(key) {}
+    if (this.left && key < this.key) {
+      return this.left.find(key);
+    } else if (this.right && key > this.key) {
+      return this.right.find(key);
+    } else {
+      // throw new Error('Key Error');
+      return null;
+    }
+
+  }
+
+  remove(key) {
+    //Removing case: two children
+    //if this.left and this.right exist
+    //  store current node
+    //  const successor = findSuccessor()
+    //    go right once
+    //    go left until this.left === null
+    //  currentNode.value,.key = successor.value,.key
+    //  return successor.remove(successor.key)
+    // else if this.left || this.right
+    //    set removalNode = this.left || this.right
+    //    this.left.parent (this) = 
+    // else...
+  }
 
 }
 
